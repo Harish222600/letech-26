@@ -48,10 +48,26 @@ const GeometricBackground = () => {
         </svg>
       </motion.div>
 
-      {/* Cube (Bottom Left) - Reacts to Scroll */}
+      {/* Octahedron (Top Left) - Fills the blank space */}
       <motion.div
         style={{ rotate: smoothRotateSlow, x: yParallax }}
-        className="absolute bottom-[-100px] left-[-100px] opacity-10 text-neon-purple"
+        className="absolute top-10 left-10 opacity-20 text-neon-blue"
+      >
+        <svg viewBox="0 0 100 100" className="w-[500px] h-[500px]" style={{ overflow: 'visible' }}>
+          <polygon points="50,10 90,50 50,90 10,50" fill="none" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="50" y1="10" x2="90" y2="50" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="90" y1="50" x2="50" y2="90" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="50" y1="90" x2="10" y2="50" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="10" y1="50" x2="50" y2="10" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="10" y1="50" x2="90" y2="50" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" strokeWidth="0.5" />
+        </svg>
+      </motion.div>
+
+      {/* Cube (Bottom Left) - Moved up for better visibility */}
+      <motion.div
+        style={{ rotate: smoothRotateSlow, x: yParallax }}
+        className="absolute bottom-[10%] left-[-50px] opacity-15 text-neon-purple"
       >
         <svg viewBox="0 0 100 100" className="w-[600px] h-[600px]" style={{ overflow: 'visible' }}>
           <rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" strokeWidth="0.5" />
