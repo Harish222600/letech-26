@@ -44,7 +44,7 @@ const Navbar = () => {
           >
             <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-3">
               <img 
-                src="/Logo.png" 
+                src={`${import.meta.env.BASE_URL}Logo.png`}
                 alt="LE TECH '26 Logo" 
                 className="w-12 h-12 rounded-full object-cover border-2 border-neon-cyan shadow-[0_0_15px_rgba(0,243,255,0.5)]"
               />
