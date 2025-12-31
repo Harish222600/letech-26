@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f3ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b026ff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g filter="url(#glow)">
+    <!-- Hexagon Border -->
+    <path d="M50 5 L93.3 30 V75 L50 100 L6.7 75 V30 Z" 
+          fill="none" 
+          stroke="url(#neonGradient)" 
+          stroke-width="5" 
+          stroke-linejoin="round" />
+          
+    <!-- Inner Circuit Detail -->
+    <path d="M50 15 V35 M93.3 30 L75 40 M6.7 30 L25 40" 
+          stroke="url(#neonGradient)" 
+          stroke-width="2" 
+          opacity="0.6" />
+          
+    <!-- Stylized LT Text -->
+    <text x="50" y="70" 
+          font-family="Arial, sans-serif" 
+          font-weight="bold" 
+          font-size="45" 
+          fill="url(#neonGradient)" 
+          text-anchor="middle"
+          letter-spacing="-2">LT</text>
+  </g>
+</svg>
