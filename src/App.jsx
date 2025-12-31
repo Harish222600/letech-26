@@ -10,6 +10,7 @@ import Coordinators from './components/Coordinators';
 import Footer from './components/Footer';
 import GeometricBackground from './components/GeometricBackground';
 import CustomCursor from './components/CustomCursor';
+import TouchTrail from './components/TouchTrail';
 
 const LoadingScreen = () => {
   return (
@@ -60,6 +61,7 @@ function App() {
   return (
     <div className="min-h-screen text-white overflow-hidden relative selection:bg-neon-cyan selection:text-black">
       <CustomCursor />
+      <TouchTrail />
       <GeometricBackground />
 
       <AnimatePresence>

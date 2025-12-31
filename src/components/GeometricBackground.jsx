@@ -1,6 +1,18 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
 const GeometricBackground = () => {
+  const { scrollY } = useScroll();
+  
+  // Create smooth scroll-based rotation values
+  const rotateFast = useTransform(scrollY, [0, 5000], [0, 360]);
+  const rotateSlow = useTransform(scrollY, [0, 5000], [0, -180]);
+  const rotateMedium = useTransform(scrollY, [0, 5000], [0, 180]);
+  const yParallax = useTransform(scrollY, [0, 5000], [0, 500]);
+
+  // Spring physics for smoother movement
+  const smoothRotateFast = useSpring(rotateFast, { stiffness: 50, damping: 20 });
+  const smoothRotateSlow = useSpring(rotateSlow, { stiffness: 50, damping: 20 });
+  
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none -z-50 bg-[#020205]">
       
@@ -19,13 +31,12 @@ const GeometricBackground = () => {
 
       {/* 2. Floating Wireframe Geometry */}
       
-      {/* Big Icosahedron (Top Right) */}
+      {/* Big Icosahedron (Top Right) - Reacts to Scroll */}
       <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
+        style={{ rotate: smoothRotateFast, y: yParallax }}
         className="absolute -top-20 -right-20 opacity-20"
       >
-        <svg w="600" h="600" viewBox="0 0 200 200" className="w-[800px] h-[800px] text-neon-cyan">
+        <svg  viewBox="0 0 200 200" className="w-[800px] h-[800px] text-neon-cyan">
           <polygon points="100,10 190,50 190,150 100,190 10,150 10,50" 
             fill="none" stroke="currentColor" strokeWidth="0.5" />
           <line x1="100" y1="10" x2="100" y2="100" stroke="currentColor" strokeWidth="0.5" />
@@ -37,13 +48,12 @@ const GeometricBackground = () => {
         </svg>
       </motion.div>
 
-      {/* Cube (Bottom Left) */}
+      {/* Cube (Bottom Left) - Reacts to Scroll */}
       <motion.div
-        animate={{ rotate: -360 }}
-        transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
+        style={{ rotate: smoothRotateSlow, x: yParallax }}
         className="absolute bottom-[-100px] left-[-100px] opacity-10 text-neon-purple"
       >
-        <svg w="400" h="400" viewBox="0 0 100 100" className="w-[600px] h-[600px]" style={{ overflow: 'visible' }}>
+        <svg viewBox="0 0 100 100" className="w-[600px] h-[600px]" style={{ overflow: 'visible' }}>
           <rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" strokeWidth="0.5" />
           <rect x="30" y="30" width="60" height="60" fill="none" stroke="currentColor" strokeWidth="0.5" />
           <line x1="20" y1="20" x2="30" y2="30" stroke="currentColor" strokeWidth="0.5" />
@@ -53,17 +63,17 @@ const GeometricBackground = () => {
         </svg>
       </motion.div>
 
-      {/* Pyramid (Center/Random Drift) */}
+      {/* Pyramid (Center) - Reacts to Scroll */}
       <motion.div
+        style={{ rotate: rotateMedium }}
         animate={{ 
           y: [0, -50, 0],
-          rotate: [0, 10, 0],
           scale: [1, 1.1, 1]
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-1/2 left-1/4 opacity-10 text-neon-pink"
       >
-        <svg width="300" height="300" viewBox="0 0 100 100" className="w-[400px] h-[400px]">
+        <svg viewBox="0 0 100 100" className="w-[400px] h-[400px]">
           <polygon points="50,10 90,90 10,90" fill="none" stroke="currentColor" strokeWidth="0.5" />
           <line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" strokeWidth="0.5" />
         </svg>
