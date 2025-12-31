@@ -79,8 +79,8 @@ function App() {
           <About />
           <Events />
           <Timeline />
-          <Registration />
           <Coordinators />
+          <Registration />
           <Footer />
         </motion.div>
       )}

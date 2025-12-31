@@ -17,8 +17,15 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 50);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -64,7 +71,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 offset={-100}
-                duration={500}
+                duration={300}
                 activeClass="bg-gradient-to-r from-neon-cyan to-neon-purple text-white shadow-[0_0_20px_rgba(0,243,255,0.3)]"
                 className="px-4 py-2 rounded-full font-medium text-gray-300 hover:text-white transition-all duration-300 cursor-pointer hover:bg-white/5"
               >
@@ -100,7 +107,7 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     offset={-100}
-                    duration={500}
+                    duration={300}
                     onClick={() => setIsMobileMenuOpen(false)}
                     activeClass="bg-gradient-to-r from-neon-cyan to-neon-purple text-white shadow-[0_0_20px_rgba(0,243,255,0.3)]"
                     className="block px-4 py-3 rounded-lg text-left font-medium text-gray-300 hover:bg-white/10 transition-all duration-300 cursor-pointer"
