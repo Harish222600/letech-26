@@ -10,8 +10,9 @@ const GeometricBackground = () => {
   const yParallax = useTransform(scrollY, [0, 5000], [0, 500]);
 
   // Spring physics for smoother movement
-  const smoothRotateFast = useSpring(rotateFast, { stiffness: 50, damping: 20 });
-  const smoothRotateSlow = useSpring(rotateSlow, { stiffness: 50, damping: 20 });
+  // Spring physics for smoother movement (Lower stiffness = more floaty/less jerky)
+  const smoothRotateFast = useSpring(rotateFast, { stiffness: 15, damping: 30 });
+  const smoothRotateSlow = useSpring(rotateSlow, { stiffness: 15, damping: 30 });
   
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none -z-50 bg-[#020205]">
@@ -33,7 +34,7 @@ const GeometricBackground = () => {
       
       {/* Big Icosahedron (Top Right) - Reacts to Scroll */}
       <motion.div
-        style={{ rotate: smoothRotateFast, y: yParallax }}
+        style={{ rotate: smoothRotateFast, y: yParallax, willChange: 'transform' }}
         className="absolute -top-20 -right-20 opacity-20"
       >
         <svg  viewBox="0 0 200 200" className="w-[800px] h-[800px] text-neon-cyan">
