@@ -24,20 +24,62 @@ const Coordinators = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={staggerContainer}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center"
+          className="flex flex-col md:flex-row gap-8 justify-center items-stretch max-w-5xl mx-auto"
         >
-          {/* Main Coordinator */}
+          {/* Convenors */}
           <motion.div
             variants={fadeInUp}
-            className="md:col-start-1 md:row-start-1 lg:col-start-2 glass-strong p-8 rounded-2xl text-center border border-neon-cyan/50 shadow-[0_0_30px_rgba(0,243,255,0.15)] transform hover:-translate-y-2 transition-transform duration-300"
+            className="flex-1 glass-strong p-8 rounded-2xl text-center border border-neon-purple/50 shadow-[0_0_30px_rgba(189,52,254,0.15)] transform hover:-translate-y-2 transition-transform duration-300 flex flex-col justify-center order-2 md:order-1"
+          >
+            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-neon-purple to-pink-600 rounded-full mb-6 flex items-center justify-center text-4xl text-white shadow-lg">
+              <HiUser />
+            </div>
+            <h3 className="text-2xl font-bold font-orbitron text-white mb-4">Convenors</h3>
+
+            <div className="mb-4">
+              <p className="text-white font-semibold">Mrs. R. RAJESHWARI</p>
+              <p className="text-gray-400 text-sm">Asst. Professor</p>
+              <a href="tel:7358635695" className="text-neon-purple text-xs tracking-wider block mt-1 hover:text-white transition-colors">73586 35695</a>
+            </div>
+
+            <div>
+              <p className="text-white font-semibold">Mrs. K. MALATHY</p>
+              <p className="text-gray-400 text-sm">Asst. Professor</p>
+              <a href="tel:9962552343" className="text-neon-purple text-xs tracking-wider block mt-1 hover:text-white transition-colors">99625 52343</a>
+            </div>
+
+            <div className="flex justify-center space-x-4 mt-6">
+              <a href="tel:7358635695" className="p-2 bg-white/10 rounded-full hover:bg-neon-purple hover:text-white transition-colors">
+                <HiPhone size={20} />
+              </a>
+              <a href="mailto:letech@saec.ac.in" className="p-2 bg-white/10 rounded-full hover:bg-neon-purple hover:text-white transition-colors">
+                <HiMail size={20} />
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Student Coordinators */}
+          <motion.div
+            variants={fadeInUp}
+            className="flex-1 glass-strong p-8 rounded-2xl text-center border border-neon-cyan/50 shadow-[0_0_30px_rgba(0,243,255,0.15)] transform hover:-translate-y-2 transition-transform duration-300 flex flex-col justify-center order-1 md:order-2"
           >
             <div className="w-24 h-24 mx-auto bg-gradient-to-br from-neon-cyan to-blue-600 rounded-full mb-6 flex items-center justify-center text-4xl text-white shadow-lg">
               <HiUser />
             </div>
-            <h3 className="text-2xl font-bold font-orbitron text-white mb-1">Joshua D</h3>
-            <p className="text-neon-cyan font-semibold mb-4">Student Coordinator</p>
-            <p className="text-gray-400 text-sm mb-4">MCA - II Year</p>
-            
+            <h3 className="text-2xl font-bold font-orbitron text-white mb-2">Student Coordinators</h3>
+
+            <div className="mb-4">
+              <p className="text-white font-semibold">PRASADH. S.N</p>
+              <p className="text-gray-400 text-sm">MCA - I Year</p>
+              <a href="tel:7395948252" className="text-neon-cyan text-sm tracking-widest block mt-1 hover:text-white transition-colors">73959 48252</a>
+            </div>
+
+            <div className="mb-6">
+              <p className="text-white font-semibold">JOSHUA. D</p>
+              <p className="text-gray-400 text-sm">MCA - II Year</p>
+              <a href="tel:9677001321" className="text-neon-cyan text-sm tracking-widest block mt-1 hover:text-white transition-colors">96770 01321</a>
+            </div>
+
             <div className="flex justify-center space-x-4">
               <a href="tel:9677001321" className="p-2 bg-white/10 rounded-full hover:bg-neon-cyan hover:text-black transition-colors">
                 <HiPhone size={20} />
@@ -46,35 +88,7 @@ const Coordinators = () => {
                 <HiMail size={20} />
               </a>
             </div>
-             <p className="mt-4 text-sm font-mono text-gray-300">9677001321</p>
           </motion.div>
-
-          {/* Convenors Placeholder */}
-          <motion.div
-            variants={fadeInUp}
-            className="glass p-8 rounded-2xl text-center border border-neon-purple/30 hover:border-neon-purple/60 transition-colors"
-          >
-            <div className="w-20 h-20 mx-auto bg-gradient-to-br from-neon-purple to-pink-600 rounded-full mb-6 flex items-center justify-center text-3xl text-white shadow-lg">
-              <HiUser />
-            </div>
-            <h3 className="text-xl font-bold font-orbitron text-white mb-1">Faculty Convenors</h3>
-            <p className="text-neon-purple font-semibold mb-4">Department of MCA</p>
-            <p className="text-gray-400 text-sm">Guiding Force Behind LE TECH '26</p>
-          </motion.div>
-
-           {/* Staff Coordinators Placeholder */}
-           <motion.div
-            variants={fadeInUp}
-            className="glass p-8 rounded-2xl text-center border border-neon-pink/30 hover:border-neon-pink/60 transition-colors"
-          >
-            <div className="w-20 h-20 mx-auto bg-gradient-to-br from-neon-pink to-orange-600 rounded-full mb-6 flex items-center justify-center text-3xl text-white shadow-lg">
-              <HiUser />
-            </div>
-            <h3 className="text-xl font-bold font-orbitron text-white mb-1">Staff Coordinators</h3>
-            <p className="text-neon-pink font-semibold mb-4">Department of MCA</p>
-            <p className="text-gray-400 text-sm">Supporting and Mentoring</p>
-          </motion.div>
-
         </motion.div>
       </div>
     </section>

@@ -8,7 +8,7 @@ import { fadeInUp, slideInLeft, slideInRight } from '../animations/variants';
 const Registration = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  
+
   // Replace this with your actual Google Form URL
   const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdwCABC_DEMO_URL/viewform";
 
@@ -33,7 +33,7 @@ const Registration = () => {
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-12 items-center justify-center max-w-6xl mx-auto">
-          
+
           {/* Instructions Card */}
           <motion.div
             ref={ref}
@@ -45,7 +45,7 @@ const Registration = () => {
             <h3 className="text-2xl font-orbitron font-bold mb-6 text-neon-purple flex items-center gap-2">
               <FaExclamationCircle /> Important Info
             </h3>
-            
+
             <ul className="space-y-6 text-gray-300">
               <li className="flex items-start gap-4">
                 <div className="w-8 h-8 rounded-full bg-neon-cyan/20 flex items-center justify-center text-neon-cyan flex-shrink-0 mt-1">
@@ -56,14 +56,18 @@ const Registration = () => {
                   <p className="text-sm">A nominal fee of <span className="text-neon-green font-bold text-lg">₹100</span> per student.</p>
                 </div>
               </li>
-              
+
               <li className="flex items-start gap-4">
                 <div className="w-8 h-8 rounded-full bg-neon-purple/20 flex items-center justify-center text-neon-purple flex-shrink-0 mt-1">
                   <span className="font-bold">2</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-white mb-1">Payment Method</h4>
-                  <p className="text-sm">Pay via UPI/GPay at the venue or upload screenshot in the form.</p>
+                  <h4 className="font-bold text-white mb-1">Rules</h4>
+                  <p className="text-sm">
+                    <span className="block">• ID Card is mandatory.</span>
+                    <span className="block">• Only 8 students per college.</span>
+                    <span className="block">• Formals only.</span>
+                  </p>
                 </div>
               </li>
 
@@ -87,12 +91,12 @@ const Registration = () => {
             className="flex-1 w-full max-w-md bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-2xl p-1 shadow-2xl shadow-neon-cyan/20"
           >
             <div className="bg-[#0f0f1a] rounded-xl p-8 flex flex-col items-center text-center h-full">
-              
+
               <div className="relative mb-8 group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink rounded-xl opacity-50 blur-lg group-hover:opacity-100 transition duration-500 animate-pulse-slow"></div>
                 <div className="relative bg-white p-4 rounded-xl">
-                  <QRCodeSVG 
-                    value={googleFormUrl} 
+                  <QRCodeSVG
+                    value={googleFormUrl}
                     size={200}
                     level="H"
                     includeMargin={false}
@@ -103,9 +107,9 @@ const Registration = () => {
               <h3 className="text-2xl font-bold font-orbitron text-white mb-2">Scan to Register</h3>
               <p className="text-gray-400 text-sm mb-8">or click the button below</p>
 
-              <a 
-                href={googleFormUrl} 
-                target="_blank" 
+              <a
+                href={googleFormUrl}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-full group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-transparent border-2 border-neon-cyan rounded-full hover:bg-neon-cyan hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neon-cyan"
               >

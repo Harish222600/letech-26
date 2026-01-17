@@ -3,6 +3,10 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { fadeInUp, fadeIn } from '../animations/variants';
 
+import sdg9 from '../assets/sdg-9.jpg';
+import sdg11 from '../assets/sdg-11.jpg';
+import sdg13 from '../assets/sdg-13.jpg';
+
 const Hero = () => {
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
@@ -36,7 +40,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      
+
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-transparent -z-5"></div>
 
@@ -66,7 +70,7 @@ const Hero = () => {
           >
             NATIONAL LEVEL TECHNICAL SYMPOSIUM
           </motion.p>
-          
+
           <h1
             ref={titleRef}
             className="font-orbitron text-6xl md:text-8xl lg:text-9xl font-black mb-4 neon-glow-cyan"
@@ -84,6 +88,32 @@ const Hero = () => {
           >
             DEPARTMENT OF MCA
           </motion.p>
+
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+            className="text-white text-sm md:text-lg italic font-light tracking-wide max-w-3xl mx-auto"
+          >
+            "Technology & Innovation for Sustainable Development (SDGs)"
+          </motion.p>
+
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+            className="flex justify-center gap-4 md:gap-8 mt-6 mb-8"
+          >
+            <div className="w-16 h-16 md:w-24 md:h-24 bg-white/10 rounded-lg overflow-hidden glass-strong p-1 hover:scale-110 transition-transform duration-300">
+              <img src={sdg9} alt="SDG 9" className="w-full h-full object-cover rounded-md" />
+            </div>
+            <div className="w-16 h-16 md:w-24 md:h-24 bg-white/10 rounded-lg overflow-hidden glass-strong p-1 hover:scale-110 transition-transform duration-300">
+              <img src={sdg11} alt="SDG 11" className="w-full h-full object-cover rounded-md" />
+            </div>
+            <div className="w-16 h-16 md:w-24 md:h-24 bg-white/10 rounded-lg overflow-hidden glass-strong p-1 hover:scale-110 transition-transform duration-300">
+              <img src={sdg13} alt="SDG 13" className="w-full h-full object-cover rounded-md" />
+            </div>
+          </motion.div>
         </div>
 
         {/* Event Details */}
@@ -135,7 +165,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-    </section>
+    </section >
   );
 };
 
