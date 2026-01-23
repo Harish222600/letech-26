@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Events from './components/Events';
 import Timeline from './components/Timeline';
-import TimeZoneClock from './components/TimeZoneClock';
 import Registration from './components/Registration';
 import Coordinators from './components/Coordinators';
 import Footer from './components/Footer';
@@ -80,7 +79,6 @@ function App() {
           <About />
           <Events />
           <Timeline />
-          <TimeZoneClock />
           <Coordinators />
           <Registration />
           <Footer />
