@@ -33,6 +33,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Prevent anchored sections from sitting under the fixed navbar */
+section {
+  scroll-margin-top: 110px;
+}
+
+@media (min-width: 768px) {
+  section {
+    scroll-margin-top: 140px;
+  }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

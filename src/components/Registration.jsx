@@ -2,15 +2,23 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
-import { FaGoogle, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
+import { FaGoogle, FaCheckCircle, FaExclamationCircle, FaLink, FaClock } from 'react-icons/fa';
 import { fadeInUp, slideInLeft, slideInRight } from '../animations/variants';
 
 const Registration = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  // Replace this with your actual Google Form URL
-  const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdwCABC_DEMO_URL/viewform";
+  const googleFormUrl = import.meta.env.VITE_GOOGLE_FORM_URL || "https://docs.google.com/forms/d/e/1FAIpQLSdwCABC_DEMO_URL/viewform";
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(googleFormUrl);
+      alert('Registration link copied to clipboard');
+    } catch (err) {
+      alert('Copy failed. Please copy manually.');
+    }
+  };
 
   return (
     <section id="registration" className="py-20 relative overflow-hidden">
@@ -54,6 +62,9 @@ const Registration = () => {
                 <div>
                   <h4 className="font-bold text-white mb-1">Registration Fee</h4>
                   <p className="text-sm">A nominal fee of <span className="text-neon-green font-bold text-lg">₹100</span> per student.</p>
+                  <span className="inline-flex items-center gap-2 mt-2 px-3 py-1 rounded-full bg-white/5 border border-neon-cyan/40 text-xs text-neon-cyan">
+                    <FaCheckCircle size={12} /> Covers participation for all events
+                  </span>
                 </div>
               </li>
 
@@ -78,6 +89,9 @@ const Registration = () => {
                 <div>
                   <h4 className="font-bold text-white mb-1">Confirmation</h4>
                   <p className="text-sm">Capture the success message after form submission.</p>
+                  <span className="inline-flex items-center gap-2 mt-2 px-3 py-1 rounded-full bg-white/5 border border-neon-pink/30 text-xs text-neon-pink">
+                    <FaClock size={12} /> Form closes 48 hours before the event
+                  </span>
                 </div>
               </li>
             </ul>
@@ -105,18 +119,28 @@ const Registration = () => {
               </div>
 
               <h3 className="text-2xl font-bold font-orbitron text-white mb-2">Scan to Register</h3>
-              <p className="text-gray-400 text-sm mb-8">or click the button below</p>
+              <p className="text-gray-400 text-sm mb-4">or click the buttons below</p>
 
-              <a
-                href={googleFormUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-transparent border-2 border-neon-cyan rounded-full hover:bg-neon-cyan hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neon-cyan"
-              >
-                <FaGoogle className="mr-2 group-hover:animate-bounce" />
-                Fill Google Form
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-ping"></div>
-              </a>
+              <div className="flex flex-col gap-3 w-full">
+                <a
+                  href={googleFormUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-transparent border-2 border-neon-cyan rounded-full hover:bg-neon-cyan hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neon-cyan"
+                >
+                  <FaGoogle className="mr-2 group-hover:animate-bounce" />
+                  Fill Google Form
+                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-ping"></div>
+                </a>
+
+                <button
+                  type="button"
+                  onClick={handleCopy}
+                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-3 font-semibold text-white bg-white/5 border border-white/15 rounded-full hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neon-purple"
+                >
+                  <FaLink /> Copy form link
+                </button>
+              </div>
 
             </div>
           </motion.div>

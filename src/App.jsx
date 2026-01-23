@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import GeometricBackground from './components/GeometricBackground';
 import CustomCursor from './components/CustomCursor';
 import TouchTrail from './components/TouchTrail';
+import BackToTop from './components/BackToTop';
 
 const LoadingScreen = () => {
   return (
@@ -48,6 +49,8 @@ const LoadingScreen = () => {
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [reduceMotion, setReduceMotion] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
     // Simulate loading time
@@ -58,11 +61,27 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handlePreferenceChange = () => setReduceMotion(mediaQuery.matches);
+    handlePreferenceChange();
+    mediaQuery.addEventListener('change', handlePreferenceChange);
+    return () => mediaQuery.removeEventListener('change', handlePreferenceChange);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 600);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen text-white overflow-hidden relative selection:bg-neon-cyan selection:text-black">
-      <CustomCursor />
-      <TouchTrail />
-      <GeometricBackground />
+      {!reduceMotion && <CustomCursor />}
+      {!reduceMotion && <TouchTrail />}
+      <GeometricBackground reduceMotion={reduceMotion} />
 
       <AnimatePresence>
         {loading && <LoadingScreen />}
@@ -84,6 +103,10 @@ function App() {
           <Footer />
         </motion.div>
       )}
+
+      <AnimatePresence>
+        {showBackToTop && <BackToTop />}
+      </AnimatePresence>
     </div>
   );
 }

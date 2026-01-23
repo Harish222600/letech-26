@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
-const GeometricBackground = () => {
+const GeometricBackground = ({ reduceMotion = false }) => {
   const { scrollY } = useScroll();
   
   // Create smooth scroll-based rotation values
@@ -14,6 +14,15 @@ const GeometricBackground = () => {
   const smoothRotateFast = useSpring(rotateFast, { stiffness: 15, damping: 30 });
   const smoothRotateSlow = useSpring(rotateSlow, { stiffness: 15, damping: 30 });
   
+  if (reduceMotion) {
+    return (
+      <div className="fixed inset-0 overflow-hidden pointer-events-none -z-50 bg-[#020205]">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d17] via-[#05050b] to-[#0d0d17] opacity-80" />
+        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(0,243,255,0.08), transparent 30%), radial-gradient(circle at 80% 30%, rgba(176,38,255,0.08), transparent 30%), radial-gradient(circle at 50% 80%, rgba(255,0,110,0.06), transparent 35%)' }} />
+      </div>
+    );
+  }
+
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none -z-50 bg-[#020205]">
       
