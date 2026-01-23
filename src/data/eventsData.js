@@ -3,10 +3,10 @@ export const technicalEvents = [
         id: 1,
         name: "Paper Presentation",
         icon: "📄",
-        description: "Present your research and innovative ideas",
+        description: "Present research on SDG 13 – Climate Action (AI for climate prediction, green computing, carbon tracking, renewable energy systems, climate-aware smart systems)",
         rules: [
             "Team Size: 2 members per team",
-            "Topics: Recent Trends in Technology",
+            "Topics: SDG 13 – Climate Action. Suggested areas: AI & Data Analytics for Climate Prediction, Green Computing, Carbon Footprint Tracking Apps, Renewable Energy Management Systems, Climate-aware Smart Systems",
             "Time limit: 7 mins presentation + 3 mins Viva"
         ],
         timing: "10:30 AM - 11:15 AM",
@@ -34,15 +34,15 @@ export const technicalEvents = [
         id: 3,
         name: "Poster Design Competition",
         icon: "🎨",
-        description: "Design creative posters reflecting innovative ideas on SDG goals",
+        description: "Design creative posters on SDG 11 – Sustainable Cities (Smart City, IoT for Urban Management, Traffic Systems, Waste & Water, GIS)",
         rules: [
             "Individual participation only.",
-            "Theme: Any one UN Sustainable Development Goal (SDG).",
-            "Must mention selected SDG number and title.",
+            "Theme: SDG 11 – Sustainable Cities. Pick one focus area: Smart City Applications, IoT for Urban Management, Intelligent Traffic Systems, Waste & Water Management Systems, or GIS & Smart Governance.",
+            "Poster must clearly mention SDG 11 and the chosen focus area.",
             "Original, creative, free from plagiarism.",
             "Format: A3 size (portrait/landscape) using digital tools.",
             "Designed exclusively at the venue (No pre-made designs).",
-            "Evaluation: Relevance to SDG, creativity, clarity, and visual appeal.",
+            "Evaluation: Relevance to SDG 11, creativity, clarity, and visual appeal.",
             "Judges' decision is final."
         ],
         timing: "12:00 PM - 12:40 PM",
