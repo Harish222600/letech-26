@@ -37,7 +37,7 @@ const Timeline = () => {
             const isLeft = index % 2 === 0;
             return (
               <div key={index} className={`relative flex items-center justify-between mb-8 w-full ${isLeft ? 'md:flex-row-reverse' : ''}`}>
-                
+
                 {/* Empty Space for alignment */}
                 <div className="hidden md:block w-5/12"></div>
 
@@ -51,15 +51,9 @@ const Timeline = () => {
                   initial={{ opacity: 0, x: isLeft ? 50 : -50 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`ml-12 md:ml-0 w-full md:w-5/12 glass p-6 rounded-xl border-l-4 ${
-                    index % 3 === 0 ? 'border-neon-cyan' : index % 3 === 1 ? 'border-neon-purple' : 'border-neon-pink'
-                  } hover:scale-105 transition-transform duration-300`}
+                  className={`ml-12 md:ml-0 w-full md:w-5/12 glass p-6 rounded-xl border-l-4 ${index % 3 === 0 ? 'border-neon-cyan' : index % 3 === 1 ? 'border-neon-purple' : 'border-neon-pink'
+                    } hover:scale-105 transition-transform duration-300`}
                 >
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-2 bg-white/10 ${
-                    index % 3 === 0 ? 'text-neon-cyan' : index % 3 === 1 ? 'text-neon-purple' : 'text-neon-pink'
-                  }`}>
-                    {item.time}
-                  </span>
                   <h3 className="text-xl font-bold font-orbitron text-white mb-2">{item.title}</h3>
                   <p className="text-gray-400 text-sm">{item.description}</p>
                 </motion.div>

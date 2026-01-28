@@ -9,7 +9,6 @@ export const technicalEvents = [
             "Topics: SDG 13 – Climate Action. Suggested areas: AI & Data Analytics for Climate Prediction, Green Computing, Carbon Footprint Tracking Apps, Renewable Energy Management Systems, Climate-aware Smart Systems",
             "Time limit: 7 mins presentation + 3 mins Viva"
         ],
-        timing: "10:30 AM - 11:15 AM",
         coordinator: "Dr. Sujatha",
         contact: "+91 98400 95127"
     },
@@ -26,7 +25,6 @@ export const technicalEvents = [
             "Selected teams move to final round",
             "AI tools strictly prohibited"
         ],
-        timing: "10:30 AM - 11:15 AM (Prelims) | 2:15 PM (Final)",
         coordinator: "Mrs. Julite",
         contact: "+91 861 070 9467"
     },
@@ -45,7 +43,6 @@ export const technicalEvents = [
             "Evaluation: Relevance to SDG 11, creativity, clarity, and visual appeal.",
             "Judges' decision is final."
         ],
-        timing: "12:00 PM - 12:40 PM",
         coordinator: "Mrs. Usha",
         contact: "+91 99406 27942"
     }
@@ -61,10 +58,10 @@ export const nonTechnicalEvents = [
             "Team: 2 members. Round 1 (Prelims): Identify connections in images. Top 5 move to next.",
             "Round 2 (Semi-Finals): More challenging sets. Top 3 advance.",
             "Round 3 (Finals): Hardest sets. Highest score wins.",
-            "Scoring: 1pt (R1), 2pts (R2), 5pts (R3). Negative marks for wrong answers.",
+            "Scoring: 1pt (R1), 2pts (R2), 5pts (R3).",
+            "Tie-Breaker: In case of a tie, a sudden-death connection question will be asked.",
             "Time Limit: 15s per question. Buzzer system."
         ],
-        timing: "12:00 PM - 12:40 PM | 2:45 PM (Final)",
         coordinator: "Mrs. Lakshmi",
         contact: "+91 98409 49352"
     },
@@ -81,7 +78,6 @@ export const nonTechnicalEvents = [
             "Caption is mandatory for every submission.",
             "Theme announced at venue."
         ],
-        timing: "11:15 AM - 12:00 PM",
         coordinator: "Dr. Meera",
         contact: "+91 91769 27745"
     },
@@ -95,7 +91,6 @@ export const nonTechnicalEvents = [
             "Solve riddles and follow the trail",
             "Physical activity involved"
         ],
-        timing: "11:15 AM - 12:00 PM",
         coordinator: "Mr. Sankar",
         contact: "+91 94449 40245"
     },
@@ -112,7 +107,6 @@ export const nonTechnicalEvents = [
             "Stable internet connection required.",
             "Prize distribution as per structure."
         ],
-        timing: "12:30 PM",
         coordinator: "Mr. Sankar",
         contact: "+91 94449 40245"
     },
@@ -128,7 +122,6 @@ export const nonTechnicalEvents = [
             "Performance: Create advertisement theme suitable for product.",
             "Criteria: Creative and entering performance."
         ],
-        timing: "1:50 PM",
         coordinator: "Mrs. Rajeshwari",
         contact: "+91 73586 35695"
     },
@@ -143,7 +136,6 @@ export const nonTechnicalEvents = [
             "Round 3: Final Round. Headphone challenge (Action & Guess song).",
             "Winner Selection: Top 2 teams (Winner & Runner)."
         ],
-        timing: "3:15 PM",
         coordinator: "Mrs. Lakshmi",
         contact: "+91 98409 49352"
     }
@@ -151,52 +143,42 @@ export const nonTechnicalEvents = [
 
 export const timelineEvents = [
     {
-        time: "9:00 AM - 9:30 AM",
         title: "Inauguration & Intro",
         description: "Welcome address and event introduction"
     },
     {
-        time: "10:30 AM - 11:15 AM",
         title: "Paper Presentation & Quiz",
         description: "Concurrent technical sessions"
     },
     {
-        time: "11:15 AM - 12:00 PM",
         title: "Photography & Treasure Hunt",
         description: "Exploring creativity and campus"
     },
     {
-        time: "12:00 PM - 12:40 PM",
         title: "Poster Making & Connexion",
         description: "Design and logical thinking events"
     },
     {
-        time: "12:30 PM",
         title: "Esports (Free-Fire)",
         description: "Gaming tournament begins"
     },
     {
-        time: "1:50 PM",
         title: "Ad-Zap",
         description: "Marketing and acting skills showcase"
     },
     {
-        time: "2:15 PM",
         title: "Quiz (Final Round)",
         description: "Deciding the ultimate tech wizards"
     },
     {
-        time: "2:45 PM",
         title: "Connexion (Final Round)",
         description: "Final battle of connections"
     },
     {
-        time: "3:15 PM",
         title: "Start Music",
         description: "Musical fun event"
     },
     {
-        time: "3:45 PM",
         title: "Validation & Closing",
         description: "Prize distribution and vote of thanks"
     }
