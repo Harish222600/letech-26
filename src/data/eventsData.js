@@ -85,11 +85,14 @@ export const nonTechnicalEvents = [
         id: 6,
         name: "Treasure Hunt",
         icon: "🗺️",
-        description: "Solve clues and find the hidden treasure",
+        description: "Find the hidden prize through challenging clues aligned with SDG Goals 4, 5, 6, and 17",
         rules: [
-            "Team event",
-            "Solve riddles and follow the trail",
-            "Physical activity involved"
+            "Team Size: 2 participants per college.",
+            "The Prize will be hidden within the college campus in a safe and secure environment.",
+            "Time Limit: 20 minutes to complete the treasure hunt.",
+            "Clues will be challenging yet solvable and may include riddles, puzzles, or physical tasks.",
+            "SDG Goals Theme: SDG 4 (Quality Education), SDG 5 (Gender Equality), SDG 6 (Clean Water and Sanitation), SDG 17 (Partnership for the Goals).",
+            "Participants must follow all campus safety rules during the hunt."
         ],
         coordinator: "Mr. Sankar",
         contact: "+91 94449 40245"
@@ -171,7 +174,7 @@ export const timelineEvents = [
         description: "Deciding the ultimate tech wizards"
     },
     {
-        title: "Connexion (Final Round)",
+        title: "Connexion ",
         description: "Final battle of connections"
     },
     {
