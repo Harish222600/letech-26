@@ -9,7 +9,7 @@ const Registration = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const googleFormUrl = import.meta.env.VITE_GOOGLE_FORM_URL || "https://docs.google.com/forms/d/e/1FAIpQLSdwCABC_DEMO_URL/viewform";
+  const googleFormUrl = import.meta.env.VITE_GOOGLE_FORM_URL || "https://forms.gle/Y9J4FgBLsxqAjefP7";
 
   const handleCopy = async () => {
     try {
