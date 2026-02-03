@@ -102,6 +102,24 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
+            className="mt-8 mb-4"
+          >
+            <div className="relative inline-block group hover:scale-105 transition-transform duration-300">
+              <div className="absolute -inset-1 bg-gradient-to-r from-red-600 via-orange-500 to-red-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <span className="relative block px-8 py-4 bg-black rounded-lg leading-none flex items-center gap-3 border border-red-500/50">
+                <span className="text-3xl animate-bounce">⚠️</span>
+                <span className="font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500 text-lg md:text-2xl tracking-wider uppercase drop-shadow-sm">
+                  Only for Arts & Science Students
+                </span>
+                <span className="text-3xl animate-bounce">⚠️</span>
+              </span>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
             className="flex justify-center gap-4 md:gap-8 mt-6 mb-8"
           >
             <div className="w-16 h-16 md:w-24 md:h-24 bg-white/10 rounded-lg overflow-hidden glass-strong p-1 hover:scale-110 transition-transform duration-300">

@@ -68,6 +68,19 @@ const Registration = () => {
                 </div>
               </li>
 
+              <li className="flex items-start gap-4 p-4 rounded-xl bg-red-500/10 border border-red-500/50 shadow-[0_0_15px_rgba(239,68,68,0.2)]">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center text-red-500 flex-shrink-0 mt-1">
+                  <span className="font-bold text-xl">!</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-red-400 mb-1 text-lg uppercase tracking-wide">Eligibility Warning</h4>
+                  <p className="text-white font-medium">This event is <span className="text-red-500 font-black text-lg underline decoration-red-500/50 underline-offset-4">ONLY</span> for <span className="text-white font-bold">Arts & Science Students</span>.</p>
+                  <span className="inline-flex items-center gap-2 mt-3 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/40 text-xs text-red-300 font-bold">
+                    <FaExclamationCircle size={12} /> ENGINEERING STUDENTS NOT ELIGIBLE
+                  </span>
+                </div>
+              </li>
+
               <li className="flex items-start gap-4">
                 <div className="w-8 h-8 rounded-full bg-neon-purple/20 flex items-center justify-center text-neon-purple flex-shrink-0 mt-1">
                   <span className="font-bold">2</span>
