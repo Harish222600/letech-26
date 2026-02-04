@@ -7,10 +7,14 @@ export const technicalEvents = [
         rules: [
             "Team Size: 2 members per team",
             "Topics: SDG 13 – Climate Action. Suggested areas: AI & Data Analytics for Climate Prediction, Green Computing, Carbon Footprint Tracking Apps, Renewable Energy Management Systems, Climate-aware Smart Systems",
-            "Time limit: 7 mins presentation + 3 mins Viva"
+            "Time limit: 7 mins presentation + 3 mins Viva",
+            "Students must bring two hard copies of their paper for the judges",
+            "The PowerPoint presentation should contain a maximum of 10 slides",
+            "The paper and presentation must be submitted in a properly working pen drive"
         ],
         coordinator: "Dr. Sujatha",
-        contact: "+91 98400 95127"
+        contact: "+91 98400 95127",
+        timing: "11:00 AM - 11:45 AM"
     },
     {
         id: 2,
@@ -26,7 +30,8 @@ export const technicalEvents = [
             "AI tools strictly prohibited"
         ],
         coordinator: "Mrs. Julite",
-        contact: "+91 861 070 9467"
+        contact: "+91 861 070 9467",
+        timing: "11:00 AM - 11:45 AM (Prelims) & 2:00 PM - 2:30 PM (Final Round)"
     },
     {
         id: 3,
@@ -44,7 +49,8 @@ export const technicalEvents = [
             "Judges' decision is final."
         ],
         coordinator: "Mrs. Usha",
-        contact: "+91 99406 27942"
+        contact: "+91 99406 27942",
+        timing: "10:15 AM - 11:00 AM"
     }
 ];
 
@@ -63,7 +69,8 @@ export const nonTechnicalEvents = [
             "Time Limit: 15s per question. Buzzer system."
         ],
         coordinator: "Mrs. Lakshmi",
-        contact: "+91 98409 49352"
+        contact: "+91 98409 49352",
+        timing: "10:15 AM - 11:00 AM (Prelims) & 2:30 PM - 3:00 PM (Final Round)"
     },
     {
         id: 5,
@@ -79,7 +86,8 @@ export const nonTechnicalEvents = [
             "Theme announced at venue."
         ],
         coordinator: "Dr. Meera",
-        contact: "+91 91769 27745"
+        contact: "+91 91769 27745",
+        timing: "11:45 AM - 12:30 PM"
     },
     {
         id: 6,
@@ -95,7 +103,8 @@ export const nonTechnicalEvents = [
             "Participants must follow all campus safety rules during the hunt."
         ],
         coordinator: "Mr. Sankar",
-        contact: "+91 94449 40245"
+        contact: "+91 94449 40245",
+        timing: "11:45 AM - 12:30 PM"
     },
     {
         id: 7,
@@ -111,7 +120,8 @@ export const nonTechnicalEvents = [
             "Prize distribution as per structure."
         ],
         coordinator: "Mr. Sankar",
-        contact: "+91 94449 40245"
+        contact: "+91 94449 40245",
+        timing: "12:30 PM - 1:30 PM"
     },
     {
         id: 8,
@@ -126,7 +136,8 @@ export const nonTechnicalEvents = [
             "Criteria: Creative and entering performance."
         ],
         coordinator: "Mrs. Rajeshwari",
-        contact: "+91 73586 35695"
+        contact: "+91 73586 35695",
+        timing: "1:30 PM - 2:00 PM"
     },
     {
         id: 9,
@@ -140,49 +151,70 @@ export const nonTechnicalEvents = [
             "Winner Selection: Top 2 teams (Winner & Runner)."
         ],
         coordinator: "Mrs. Lakshmi",
-        contact: "+91 98409 49352"
+        contact: "+91 98409 49352",
+        timing: "3:00 PM - 3:30 PM"
     }
 ];
 
 export const timelineEvents = [
     {
-        title: "Inauguration & Intro",
-        description: "Welcome address and event introduction"
+        time: "8:00 AM - 9:00 AM",
+        title: "Registration",
+        description: "Registration and ID card verification"
     },
     {
-        title: "Paper Presentation & Quiz",
-        description: "Concurrent technical sessions"
+        time: "9:00 AM - 10:00 AM",
+        title: "Inauguration",
+        description: "Official start of the event"
     },
     {
+        time: "10:00 AM - 10:15 AM",
+        title: "Break",
+        description: "Short refreshment break"
+    },
+    {
+        time: "10:15 AM - 11:00 AM",
+        title: "Poster Presentation / Connexion",
+        description: "Parallel sessions"
+    },
+    {
+        time: "11:00 AM - 11:45 AM",
+        title: "Paper Presentation / Quiz",
+        description: "Technical and knowledge rounds"
+    },
+    {
+        time: "11:45 AM - 12:30 PM",
         title: "Photography & Treasure Hunt",
-        description: "Exploring creativity and campus"
+        description: "Creative and exploration activities"
     },
     {
-        title: "Poster Making & Connexion",
-        description: "Design and logical thinking events"
+        time: "12:30 PM - 1:30 PM",
+        title: "Food / Games",
+        description: "Lunch and fun games"
     },
     {
-        title: "Esports (Free-Fire)",
-        description: "Gaming tournament begins"
+        time: "1:30 PM - 2:00 PM",
+        title: "Ad Zap",
+        description: "Marketing and creativity showcase"
     },
     {
-        title: "Ad-Zap",
-        description: "Marketing and acting skills showcase"
-    },
-    {
+        time: "2:00 PM - 2:30 PM",
         title: "Quiz (Final Round)",
-        description: "Deciding the ultimate tech wizards"
+        description: "Knowledge challenge"
     },
     {
-        title: "Connexion ",
-        description: "Final battle of connections"
+        time: "2:30 PM - 3:00 PM",
+        title: "Connexion (Final Round)",
+        description: "Connecting the dots"
     },
     {
-        title: "Start Music",
-        description: "Musical fun event"
+        time: "3:00 PM - 3:30 PM",
+        title: "Star Music",
+        description: "Musical entertainment"
     },
     {
-        title: "Validation & Closing",
-        description: "Prize distribution and vote of thanks"
+        time: "3:30 PM - 4:00 PM",
+        title: "Valedictory",
+        description: "Prize distribution and closing ceremony"
     }
 ];

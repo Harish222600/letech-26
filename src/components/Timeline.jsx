@@ -54,6 +54,9 @@ const Timeline = () => {
                   className={`ml-12 md:ml-0 w-full md:w-5/12 glass p-6 rounded-xl border-l-4 ${index % 3 === 0 ? 'border-neon-cyan' : index % 3 === 1 ? 'border-neon-purple' : 'border-neon-pink'
                     } hover:scale-105 transition-transform duration-300`}
                 >
+                  <span className="inline-block px-3 py-1 mb-2 text-xs font-bold border rounded-full text-neon-cyan border-neon-cyan/30 bg-neon-cyan/10">
+                    {item.time}
+                  </span>
                   <h3 className="text-xl font-bold font-orbitron text-white mb-2">{item.title}</h3>
                   <p className="text-gray-400 text-sm">{item.description}</p>
                 </motion.div>

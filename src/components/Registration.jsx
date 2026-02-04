@@ -57,6 +57,20 @@ const Registration = () => {
             <ul className="space-y-6 text-gray-300">
               <li className="flex items-start gap-4">
                 <div className="w-8 h-8 rounded-full bg-neon-cyan/20 flex items-center justify-center text-neon-cyan flex-shrink-0 mt-1">
+                  <span className="font-bold">⏰</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-white mb-1">Registration Time</h4>
+                  <p className="text-sm">
+                    <span className="text-neon-green font-bold text-lg">8:00 AM - 9:00 AM</span>
+                  </p>
+                  <span className="inline-flex items-center gap-2 mt-2 px-3 py-1 rounded-full bg-white/5 border border-neon-cyan/40 text-xs text-neon-cyan">
+                    <FaClock size={12} /> Be on time within the campus
+                  </span>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-neon-cyan/20 flex items-center justify-center text-neon-cyan flex-shrink-0 mt-1">
                   <span className="font-bold">1</span>
                 </div>
                 <div>
