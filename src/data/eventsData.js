@@ -174,7 +174,7 @@ export const timelineEvents = [
     },
     {
         time: "10:15 AM - 11:00 AM",
-        title: "Poster Presentation / Connexion",
+        title: " Poster Design Competition / Connexion",
         description: "Parallel sessions"
     },
     {
